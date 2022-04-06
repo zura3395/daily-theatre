@@ -1,0 +1,95 @@
+{
+	let extension_list = {
+		"MLTD": [{"s":{"jp":"春香","en":"Haruka","zh":"春香","kr":"하루카"},"i":"icon_001har"},{"s":{"jp":"千早","en":"Chihaya","zh":"千早","kr":"치하야"},"i":"icon_002chi"},{"s":{"jp":"美希","en":"Miki","zh":"美希","kr":"미키"},"i":"icon_003mik"},{"s":{"jp":"雪歩","en":"Yukiho","zh":"雪步","kr":"유키호"},"i":"icon_004yuk"},{"s":{"jp":"やよい","en":"Yayoi","zh":"彌生","kr":"야요이"},"i":"icon_005yay"},{"s":{"jp":"真","en":"Makoto","zh":"真","kr":"마코토"},"i":"icon_006mak"},{"s":{"jp":"伊織","en":"Iori","zh":"伊織","kr":"이오리"},"i":"icon_007ior"},{"s":{"jp":"貴音","en":"Takane","zh":"貴音","kr":"타카네"},"i":"icon_008tak"},{"s":{"jp":"律子","en":"Ritsuko","zh":"律子","kr":"리츠코"},"i":"icon_009rit"},{"s":{"jp":"あずさ","en":"Azusa","zh":"梓","kr":"아즈사"},"i":"icon_010azu"},{"s":{"jp":"亜美","en":"Ami","zh":"亞美","kr":"아미"},"i":"icon_011ami"},{"s":{"jp":"真美","en":"Mami","zh":"真美","kr":"마미"},"i":"icon_012mam"},{"s":{"jp":"響","en":"Hibiki","zh":"響","kr":"히비키"},"i":"icon_013hib"},{"s":{"jp":"未来","en":"Mirai","zh":"未來","kr":"미라이"},"i":"icon_014mir"},{"s":{"jp":"静香","en":"Shizuka","zh":"靜香","kr":"시즈카"},"i":"icon_015siz"},{"s":{"jp":"翼","en":"Tsubasa","zh":"翼","kr":"츠바사"},"i":"icon_016tsu"},{"s":{"jp":"琴葉","en":"Kotoha","zh":"琴葉","kr":"코토하"},"i":"icon_017kth"},{"s":{"jp":"エレナ","en":"Elena","zh":"艾琳娜","kr":"엘레나"},"i":"icon_018ele"},{"s":{"jp":"美奈子","en":"Minako","zh":"美奈子","kr":"미나코"},"i":"icon_019min"},{"s":{"jp":"恵美","en":"Megumi","zh":"惠美","kr":"메구미"},"i":"icon_020meg"},{"s":{"jp":"まつり","en":"Matsuri","zh":"茉莉","kr":"마츠리"},"i":"icon_021mat"},{"s":{"jp":"星梨花","en":"Serika","zh":"星梨花","kr":"세리카"},"i":"icon_022ser"},{"s":{"jp":"茜","en":"Akane","zh":"茜","kr":"아카네"},"i":"icon_023aka"},{"s":{"jp":"杏奈","en":"Anna","zh":"杏奈","kr":"안나"},"i":"icon_024ann"},{"s":{"jp":"ロコ","en":"Roco","zh":"ROCO","kr":"로코"},"i":"icon_025roc"},{"s":{"jp":"百合子","en":"Yuriko","zh":"百合子","kr":"유리코"},"i":"icon_026yur"},{"s":{"jp":"紗代子","en":"Sayoko","zh":"紗代子","kr":"사요코"},"i":"icon_027say"},{"s":{"jp":"亜利沙","en":"Arisa","zh":"亞利沙","kr":"아리사"},"i":"icon_028ari"},{"s":{"jp":"海美","en":"Umi","zh":"海美","kr":"우미"},"i":"icon_029umi"},{"s":{"jp":"育","en":"Iku","zh":"育","kr":"이쿠"},"i":"icon_030iku"},{"s":{"jp":"朋花","en":"Tomoka","zh":"朋花","kr":"토모카"},"i":"icon_031tom"},{"s":{"jp":"エミリー","en":"Emily","zh":"艾蜜莉","kr":"에밀리"},"i":"icon_032emi"},{"s":{"jp":"志保","en":"Shiho","zh":"志保","kr":"시호"},"i":"icon_033sih"},{"s":{"jp":"歩","en":"Ayumu","zh":"歩","kr":"아유무"},"i":"icon_034ayu"},{"s":{"jp":"ひなた","en":"Hinata","zh":"ひなた","kr":"히나타"},"i":"icon_035hin"},{"s":{"jp":"可奈","en":"Kana","zh":"可奈","kr":"카나"},"i":"icon_036kan"},{"s":{"jp":"奈緒","en":"Nao","zh":"奈緒","kr":"나오"},"i":"icon_037nao"},{"s":{"jp":"千鶴","en":"Chizuru","zh":"千鶴","kr":"치즈루"},"i":"icon_038chz"},{"s":{"jp":"このみ","en":"Konomi","zh":"このみ","kr":"코노미"},"i":"icon_039kon"},{"s":{"jp":"環","en":"Tamaki","zh":"環","kr":"타마키"},"i":"icon_040tam"},{"s":{"jp":"風花","en":"Fuka","zh":"風花","kr":"후우카"},"i":"icon_041fuk"},{"s":{"jp":"美也","en":"Miya","zh":"美也","kr":"미야"},"i":"icon_042miy"},{"s":{"jp":"のり子","en":"Noriko","zh":"法子","kr":"노리코"},"i":"icon_043nor"},{"s":{"jp":"瑞希","en":"Mizuki","zh":"瑞希","kr":"미즈키"},"i":"icon_044miz"},{"s":{"jp":"可憐","en":"Karen","zh":"可憐","kr":"카렌"},"i":"icon_045kar"},{"s":{"jp":"莉緒","en":"Rio","zh":"莉緒","kr":"리오"},"i":"icon_046rio"},{"s":{"jp":"昴","en":"Sabaru","zh":"昴","kr":"스바루"},"i":"icon_047sub"},{"s":{"jp":"麗花","en":"Reika","zh":"麗花","kr":"레이카"},"i":"icon_048rei"},{"s":{"jp":"桃子","en":"Momoko","zh":"桃子","kr":"모모코"},"i":"icon_049mom"},{"s":{"jp":"ジュリア","en":"Julia","zh":"茱莉亞","kr":"줄리아"},"i":"icon_050jul"},{"s":{"jp":"紬","en":"Tsumugi","zh":"紬","kr":"츠무기"},"i":"icon_051tmg"},{"s":{"jp":"歌織","en":"Kaori","zh":"歌織","kr":"카오리"},"i":"icon_052kao"},{"s":{"jp":"小鳥","en":"Kotori","zh":"小鳥","kr":"코토리"},"i":"icon_101kot"},{"s":{"jp":"美咲","en":"Misaki","zh":"美咲","kr":"미사키"},"i":"icon_102mis"},{"s":{"jp":"そら","en":"Sora","zh":"空","kr":"소라"},"i":"icon_902"}],
+		"Shiny": [{"s":{"jp":"真乃","en":"Mano"},"i":"Mano"},{"s":{"jp":"灯織","en":"Hiori"},"i":"Hiori"},{"s":{"jp":"めぐる","en":"Meguru"},"i":"Meguru"},{"s":{"jp":"恋鐘","en":"Kogane"},"i":"Kogane"},{"s":{"jp":"摩美々","en":"Mamimi"},"i":"Mamimi"},{"s":{"jp":"咲耶","en":"Sakuya"},"i":"Sakuya"},{"s":{"jp":"結華","en":"Yuika"},"i":"Yuika"},{"s":{"jp":"霧子","en":"Kiriko"},"i":"Kiriko"},{"s":{"jp":"果穂","en":"Kaho"},"i":"Kaho"},{"s":{"jp":"智代子","en":"Chiyoko"},"i":"Chiyoko"},{"s":{"jp":"樹里","en":"Juri"},"i":"Juri"},{"s":{"jp":"凛世","en":"Rinze"},"i":"Rinze"},{"s":{"jp":"夏葉","en":"Natsuha"},"i":"Natsuha"},{"s":{"jp":"甘奈","en":"Amana"},"i":"Amana"},{"s":{"jp":"甜花","en":"Tenka"},"i":"Tenka"},{"s":{"jp":"千雪","en":"Chiyuki"},"i":"Chiyuki"},{"s":{"jp":"あさひ","en":"Asahi"},"i":"Asahi"},{"s":{"jp":"冬優子","en":"Fuyuko"},"i":"Fuyuko"},{"s":{"jp":"愛依","en":"Mei"},"i":"Mei"}],
+		"Restage": [{s: {"jp": "舞菜", "en": "Mana"}, i: "01"},{s: {"jp": "紗由", "en": "Sayu"}, i: "02"},{s: {"jp": "瑞葉", "en": "Mizuha"}, i: "03"},{s: {"jp": "かえ", "en": "Kae", "zh": "香惠"}, i: "04"},{s: {"jp": "香澄", "en": "Kasumi"}, i: "05"},{s: {"jp": "みい", "en": "Mii", "zh": "美依"}, i: "06"},{s: {"jp": "紫", "en": "Yukari"}, i: "07"},{s: {"jp": "陽花", "en": "Haruka"}, i: "08"},{s: {"jp": "碧音", "en": "Aone"}, i: "09"},{s: {"jp": "瑠夏", "en": "Ruka"}, i: "10"},{s: {"jp": "珊瑚", "en": "Sango"}, i: "11"},{s: {"jp": "天葉", "en": "Amaha"}, i: "12"},{s: {"jp": "奏", "en": "Kanade"}, i: "13"},{s: {"jp": "那岐咲", "en": "Nagisa"}, i: "14"},{s: {"jp": "美久龍", "en": "Mikuru"}, i: "15"},{s: {"jp": "ハク", "en": "Haku", "zh": "白"}, i: "16"},{s: {"jp": "朱莉", "en": "Akari"}, i: "17"},{s: {"jp": "玄刃", "en": "Kuroha"}, i: "18"}]
+	};
+	let explanation = {
+		"MLTD": "ミリシタ / Million Live Theater Days",
+		"Shiny": "シャニマス / Shiny Colors",
+		"Restage": "Re:ステージ！ / Re:Stage！"
+	}
+	let names = [];
+	for (let i in extension_list) {
+		names.push(i + " (" + explanation[i] + ")");
+	}
+	if ('open' in document.createElement("dialog")){
+		let dialogs = document.createElement("dialog");
+		dialogs.appendChild(document.createTextNode("パックを選択："));
+		dialogs.appendChild(document.createElement("br"));
+		dialogs.appendChild(document.createTextNode("Select the pack:"));
+		dialogs.appendChild(document.createElement("br"));
+		let spant = document.createElement("span");
+		spant.innerHTML = "未選択 Not Selected";
+		let selectt = document.createElement("select");
+		selectt.style.width = "150px";
+		{
+			let optiont = document.createElement("option");
+			optiont.innerHTML = "未選択 Not Selected";
+			optiont.value = -1;
+			selectt.appendChild(optiont);
+		}
+		for (let i in extension_list) {
+			let optiont = document.createElement("option");
+			optiont.innerHTML = explanation[i];
+			optiont.value = i;
+			selectt.appendChild(optiont);
+		};
+		let btnconfirm = document.createElement("button");
+		selectt.onchange = function(){
+			if (this.value == -1) {
+				spant.innerHTML = "未選択 Not Selected";
+				btnconfirm.setAttribute("disabled", "disabled");
+			} else {
+				spant.innerHTML = explanation[this.value] + " (合計 " + extension_list[this.value].length + " in total)";
+				btnconfirm.removeAttribute("disabled");
+			}
+		};
+		dialogs.appendChild(selectt);
+		dialogs.appendChild(document.createElement("br"));
+		dialogs.appendChild(spant);
+		let menut = document.createElement("menu");
+		btnconfirm.setAttribute("disabled", "disabled");
+		btnconfirm.innerHTML = "OK";
+		btnconfirm.onclick = function(){
+			dialogs.removeChild(selectt);
+			let p = selectt.value;
+			if (!extensions[p]){
+				extensions[p] = extension_list[p];
+				for (let i = 0; i < extension_list[p].length; ++i) {
+					usage[p + "_" + i] = 0;
+					loaded[p + "_" + i] = false;
+				}
+				changeoptions();
+			}
+			document.body.removeChild(dialogs);
+		}
+		let btncancel = document.createElement("button");
+		btncancel.innerHTML = "Cancel";
+		btncancel.onclick = function(){
+			document.body.removeChild(dialogs);
+		}
+		menut.appendChild(btnconfirm);
+		menut.appendChild(btncancel);
+		dialogs.appendChild(menut);
+		document.body.appendChild(dialogs);
+		dialogs.showModal();
+	} else {
+		let pack_name = prompt('拡張パックの名前を入力してください\nEnter the name of the extension pack:\n\n' + names.join("\n"));
+		if (pack_name) {
+			if (extension_list[pack_name]) {
+				let p = pack_name;
+				if (!extensions[p]){
+					extensions[p] = extension_list[p];
+					for (let i = 0; i < extension_list[p].length; ++i) {
+						usage[p + "_" + i] = 0;
+						loaded[p + "_" + i] = false;
+					}
+					changeoptions();
+				}
+			} else {
+				alert("見つかりません\nNot Found");
+			}
+		}
+	}
+}
