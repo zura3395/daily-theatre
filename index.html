@@ -250,10 +250,13 @@
 		Mode: <br class="break500"><input type="radio" onclick="changeMode('van')" name="mode">Vanilla <input type="radio" onclick="changeMode('is')" name="mode" checked>Idol Story<br>
 		Language: <br class="break500"><input type="radio" onclick="changelang('jp')" name="lang">日本語 <input type="radio" onclick="changelang('en')" name="lang" checked>English<br>
 		Name Replace: <br class="break500"><input type="checkbox" onclick="toggleyo(this.checked)"><img src="img/icon/yoshiko.png" class="inline"><span id="yohanelang">(Yoshiko -> Yohane)</span> <span id="lang_zh" style="display:none"><span class="experimental" style="display: none"><input type="checkbox" onclick="togglesimp(this.checked)" name="lang"><span style="font-family: llastw">简化字（缺字）</span> </span><input type="checkbox" onclick="togglezh(this.checked)"><span style="font-family: llastw"><img src="img/icon/kotori.png" class="inline"><img src="img/icon/nico.png" class="inline">其他譯名</span> </span><br>
-		<button onclick="if (confirm('Are you sure to reset?')) {JSONimport(defaultd)}">Reset</button> <button onclick="exports()">Export</button> <button onclick="ifanyorreturn(prompt('Please paste the contents to the textbox below.',''),JSONimport)">Import</button>
+		<button onclick="if (confirm('Are you sure to reset?')) {JSONimport(defaultd)}">Reset</button>
+		<button onclick="ifanyorreturn(prompt('Please paste from title until last line.',''),ImportFromDoc)">Import From Doc</button> <br>
 		<div id="editor"></div><br>
-		<canvas width="2146" height="0" style="display:none;"></canvas><br>
-		<button onclick="predraw()">Preview</button> <button id="savebtn" onclick="saveimg()">Save</button> <button onclick="newtab()">New Tab</button>
+		<canvas width="2146" height="0" style="display:none;"></canvas>
+		<button onclick="predraw()">Render</button>
+		<button onclick="exports()">Export</button> <button onclick="ifanyorreturn(prompt('Please paste the contents to the textbox below.',''),JSONimport)">Import</button>
+		<!-- <button id="savebtn" onclick="saveimg()">Save</button> <button onclick="newtab()">New Tab</button>-->
 		<img id="preview" class="experimental2" width="2146" src="" style="display: none"><br><br><br>
 		<script>
 			function ifanyorreturn(x, callback) {
@@ -950,6 +953,47 @@
 				id("editor").appendChild(createseparator(actuald.length));
 				refreshdrawer();
 			}
+
+			function ImportFromDoc(s) {
+				if (!s) {
+					alert("Invalid Data.");
+				} else {
+					let lines =  s.split("\n");
+					let formattedLines = [];
+
+					let firstLine = lines[0];
+					let title = firstLine.split("-").slice(1).join("-").trim();
+
+					for (let i = 1; i < lines.length; i++) {
+						let line = lines[i];
+						let parts = line.split(":");
+						if (parts.length == 1) {
+							let name = "___"
+							let dialog = parts[0].trim();
+							formattedLines.push({
+								n:name,
+								d:dialog
+							});
+						} else {
+							let name = parts[0].trim().toLowerCase();
+							let dialog = parts.slice(1).join(":").trim();
+
+							let nameId = llshort.indexOf(name)
+
+							formattedLines.push({
+								n:nameId != -1 ? nameId : "???",
+								d:dialog
+							});
+						}
+					}
+
+					clearallext();
+					reset(formattedLines);
+					id("title").value = title;
+					addquotes();
+				}
+			}
+
 			function JSONimport(s, extloaded){
 				if (!s){
 					alert("Invalid Data.");
@@ -1007,6 +1051,7 @@
 					}
 				}
 			}
+
 			function exports(){
 				let wtitle = true;//confirm("Are the headers and titles attached?");
 				let output = "";
