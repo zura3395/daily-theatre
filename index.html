@@ -10,6 +10,10 @@
 		<meta property="og:image" content="https://lldetail.ml/LLAS/mainichi/twitter.png">
 		<meta name="twitter:card" content="summary_large_image" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
 		
 		<title>Daily Theatre Maker</title>
 		<link rel="stylesheet" type="text/css" href="llas-font.css?punct">
@@ -255,9 +259,9 @@
 		<button onclick="ifanyorreturn(prompt('Please paste from title until last line.',''),ImportFromDoc)">Import From Doc</button> <br>
 		<div id="editor"></div><br>
 		<canvas width="2146" height="0" style="display:none;"></canvas>
-		<button onclick="predraw()">Render</button>
+		<button onclick="predraw()">Render</button> <button id="savebtn" onclick="saveimg()">Save</button> <button onclick="newtab()">New Tab</button><br>
 		<button onclick="exports()">Export</button> <button onclick="ifanyorreturn(prompt('Please paste the contents to the textbox below.',''),JSONimport)">Import</button>
-		<!-- <button id="savebtn" onclick="saveimg()">Save</button> <button onclick="newtab()">New Tab</button>-->
+		
 		<img id="preview" class="experimental2" width="2146" src="" style="display: none"><br><br><br>
 		<script>
 			function ifanyorreturn(x, callback) {
