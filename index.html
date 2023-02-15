@@ -259,8 +259,11 @@
 		<button onclick="ifanyorreturn(prompt('Please paste from title until last line.',''),ImportFromDoc)">Import From Doc</button> <br>
 		<div id="editor"></div><br>
 		<canvas width="2146" height="0" style="display:none;"></canvas>
-		<button onclick="predraw()">Render</button> <button id="savebtn" onclick="saveimg()">Save</button> <button onclick="newtab()">New Tab</button><br>
-		<button onclick="exports()">Export</button> <button onclick="ifanyorreturn(prompt('Please paste the contents to the textbox below.',''),JSONimport)">Import</button>
+		<button onclick="predraw()">Render</button>
+		<button id="savebtn" onclick="if (isIdolStory) {if ( (document.getElementsByClassName('drawer').length < 10) && (confirm('The theatre contains fewer than 10 lines. Are you sure you want to save?')) ) {saveimg();}} else {saveimg();}">Save</button>
+		<button onclick="if (isIdolStory) {if ( (document.getElementsByClassName('drawer').length < 10) && (confirm('The theatre contains fewer than 10 lines. Are you sure you want to open it in a new tab?')) ) {newtab();}} else {newtab();}">New Tab</button><br>
+		<button onclick="if (isIdolStory) {if ( (document.getElementsByClassName('drawer').length < 10) && (confirm('The theatre contains fewer than 10 lines. Are you sure you want to open it in a new tab?')) ) {exports();}} else {exports();}">Export</button>
+		<button onclick="ifanyorreturn(prompt('Please paste the contents to the textbox below.',''),JSONimport)">Import</button>
 		
 		<img id="preview" class="experimental2" width="2146" src="" style="display: none"><br><br><br>
 		<script>
@@ -278,6 +281,7 @@
 			var actuald = JSON.parse(JSON.stringify(defaultd));
 			var lang = "en";
 			var mode = "Idol Story"
+			var isIdolStory = true
 			var bgfilename = "idolstory.png"
 			var llname = {
 			"jp": ["穂乃果","絵里","ことり","海未","凛","真姫","希","花陽","にこ","千歌","梨子","果南","ダイヤ","曜","善子","花丸","鞠莉","ルビィ","歩夢","かすみ","しずく","果林","愛","彼方","せつ菜","エマ","璃奈","栞子","ランジュ","ミア"],
@@ -897,10 +901,12 @@
 				if (mode == "is") {
 					document.getElementById("header").value = "Daily Theatre";
 					bgfilename = "idolstory.png"
+					isIdolStory = true;
 				}
 				else {
 					document.getElementById("header").value = "Everyday Theater";
 					bgfilename = "vanilla.png"
+					isIdolStory = false;
 				}
 
 				bgimg.src = bgfilename;
