@@ -260,9 +260,9 @@
 		<div id="editor"></div><br>
 		<canvas width="2146" height="0" style="display:none;"></canvas>
 		<button onclick="predraw()">Render</button>
-		<button id="savebtn" onclick="if (isIdolStory) {if ( (document.getElementsByClassName('drawer').length < 10) && (confirm('The theatre contains fewer than 10 lines. Are you sure you want to save?')) ) {saveimg();}} else {saveimg();}">Save</button>
-		<button onclick="if (isIdolStory) {if ( (document.getElementsByClassName('drawer').length < 10) && (confirm('The theatre contains fewer than 10 lines. Are you sure you want to open it in a new tab?')) ) {newtab();}} else {newtab();}">New Tab</button><br>
-		<button onclick="if (isIdolStory) {if ( (document.getElementsByClassName('drawer').length < 10) && (confirm('The theatre contains fewer than 10 lines. Are you sure you want to export?')) ) {exports();}} else {exports();}">Export</button>
+		<button id="savebtn" onclick="if ((isIdolStory) && (document.getElementsByClassName('drawer').length < 10)) {if ( confirm('The theatre contains fewer than 10 lines. Are you sure you want to save?') ) {saveimg();}} else {saveimg();}">Save</button>
+		<button onclick="if ((isIdolStory) && (document.getElementsByClassName('drawer').length < 10)) {if ( confirm('The theatre contains fewer than 10 lines. Are you sure you want to open it in a new tab?') ) {newtab();}} else {newtab();}">New Tab</button><br>
+		<button onclick="if ((isIdolStory) && (document.getElementsByClassName('drawer').length < 10)) {if ( confirm('The theatre contains fewer than 10 lines. Are you sure you want to export?') ) {exports();}} else {exports();}">Export</button>
 		<button onclick="ifanyorreturn(prompt('Please paste the contents to the textbox below.',''),JSONimport)">Import</button>
 		
 		<img id="preview" class="experimental2" width="2146" src="" style="display: none"><br><br><br>
