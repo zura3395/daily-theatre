@@ -319,7 +319,7 @@
 					month: "long",
 					year: "numeric"
 				}
-			var date = new Date().toLocaleDateString("en-GB", dateOptions);
+			var date = new Date().toLocaleDateString("en-US", dateOptions).replace(',', '');
 			document.getElementById("dateInJapan").innerHTML = date;
 			var base = new Image;
 			base.onload = function(){
