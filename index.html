@@ -237,6 +237,9 @@
 				input::placeholder {
 					color: #c00000;
 				}
+				#userDropdown {
+					color: #808080;
+				}
 			}
 			@supports not (background-color: #00000000) {
 				.btn_top, .btn_btm, .btn_swap {
@@ -279,6 +282,14 @@
 		<button onclick="if ((isIdolStory) && (document.getElementsByClassName('drawer').length < 10)) {if ( confirm('The theatre contains fewer than 10 lines. Are you sure you want to export?') ) {exportToClipboard();}} else {exportToClipboard();}">💾</button>
 		<button id="chromiumOnly" onclick="JSONimportClipboard()">📂</button>
 		<br>
+		<select id="userDropdown" name="usernames">
+			<option value="@Eaglezs">Eagles</option>
+			<option value="@camodr25">zura</option>
+			<option value="@LunasTLs">Luna</option>
+			<option value="@nattie_neko">Nattie</option>
+		</select>
+		<button onclick="textForPost()">Post</button>
+		<br>	
 		<span id="dateInJapan"></span>
 		<script>
 			function ifanyorreturn(x, callback) {
@@ -627,10 +638,17 @@
 				if (callback) callback();
 			}
 			function saveimg(){
+				var filenameDateOptions = {
+					timeZone: "Asia/Tokyo",
+					day: "2-digit",
+					month: "2-digit",
+					year: "numeric"
+				}
+				let fileDate = new Date().toLocaleString("en-CA", filenameDateOptions).replace(/-/g, '');
 				predraw(function(){
 					var a = document.createElement("a");
 					a.href = canv.toDataURL("image/png");
-					a.setAttribute("download", bgfilename);
+					a.setAttribute("download", `${fileDate} ${bgfilename}`);
 					a.click();
 				});
 			}	
@@ -1311,6 +1329,76 @@
 				loaded["custom_" + (extensions.custom.length - 1)] = true;	//no need to load
 				changeoptions();
 			}
+
+			function handleUserSelection() {
+				var dropdown = document.getElementById('userDropdown');
+				const user = dropdown.value;
+
+				setCookie('user', user, 365);
+			}
+
+			function setCookie(name, value, days) {
+				var expires = "";
+				if (days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+					expires = "; expires=" + date.toUTCString();
+				}
+				document.cookie = name + "=" + (value || "") + expires + "; path=/";
+			}
+
+			function getCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for(var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+				}
+				return null;
+			}
+
+			function preselectUser() {
+				var user = getCookie('user');
+				if (user) {
+					document.getElementById('userDropdown').value = user;
+				}
+			}
+
+			function textForPost() {
+				let dateObj = new Date().toLocaleString("en-US", dateOptions);
+				let date = new Date(dateObj);
+				let day = date.getDate();
+				let month = date.toLocaleString("en-US", { month: "long" });
+				let year = date.getFullYear();
+
+				let nthNumber = (number) => {
+				if (number > 3 && number < 21) return "th";
+				switch (number % 10) {
+					case 1:
+					return "st";
+					case 2:
+					return "nd";
+					case 3:
+					return "rd";
+					default:
+					return "th";
+				};
+				};
+
+				let postDate = `${month} ${day}${nthNumber(day)}, ${year}`;
+
+				let newTitle = title.replace(/『/g, '「').replace(/』/g, '」');
+
+				let dropdown = document.getElementById('userDropdown');
+				var user = dropdown.value;
+
+				navigator.clipboard.writeText("SIF2 Daily Theatre - " + postDate + "\n\n" + newTitle + "\n\nTL by: " + user + "\n\n#lovelive #SIF2 #スクフェス2 #毎日劇場");
+				alert('Copied post text to clipboard.');
+			}
+
+			document.getElementById('userDropdown').addEventListener('change', handleUserSelection);
+			window.onload = preselectUser;
 		</script>
 	</body>
 </html>
