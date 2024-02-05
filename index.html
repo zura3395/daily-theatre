@@ -288,7 +288,7 @@
 			<option value="@LunasTLs">Luna</option>
 			<option value="@nattie_neko">Nattie</option>
 		</select>
-		<button onclick="textForPost()">Post</button>
+		<button onclick="textForPost()">Copy Post Text</button>
 		<br>	
 		<span id="dateInJapan"></span>
 		<script>
@@ -1396,6 +1396,8 @@
 				navigator.clipboard.writeText("SIF2 Daily Theatre - " + postDate + "\n\n" + newTitle + "\n\nTL by: " + user + "\n\n#lovelive #SIF2 #スクフェス2 #毎日劇場");
 				alert('Copied post text to clipboard.');
 			}
+			
+			// return ("https://twitter.com/intent/tweet?text=SIF2 Daily Theatre - " + postDate + "%0A%0A" + newTitle + "%0A%0ATL by: " + user + "%0A%0A%23lovelive %23SIF2 %23スクフェス2 %23毎日劇場");
 
 			document.getElementById('userDropdown').addEventListener('change', handleUserSelection);
 			window.onload = preselectUser;
